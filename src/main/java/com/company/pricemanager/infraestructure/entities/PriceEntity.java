@@ -6,12 +6,14 @@ import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity(name = "PRICES")
+@ToString
 public class PriceEntity {
     @Id
     private UUID id;
