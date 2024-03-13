@@ -4,16 +4,17 @@ import com.company.pricemanager.domain.models.Price;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-@Entity(name = "PRICES")
+@AllArgsConstructor
+@NoArgsConstructor
 @ToString
+@Entity(name = "PRICES")
 public class PriceEntity {
     @Id
     private UUID id;
@@ -27,6 +28,6 @@ public class PriceEntity {
     private String currency;
 
     public Price toPrice() {
-        return new Price(brandId, productId, priceList, startDate, endDate, priority, price, currency);
+        return Price.of(brandId, productId, priceList, startDate, endDate, priority, price, currency);
     }
 }
