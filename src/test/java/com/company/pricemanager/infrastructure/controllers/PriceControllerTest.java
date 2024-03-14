@@ -23,7 +23,7 @@ import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 public class PriceControllerTest {
-    private final LocalDateTime date = LocalDateTime.of(2020, Month.JUNE, 14, 10,0,0);
+    private final LocalDateTime date = LocalDateTime.of(2020, Month.JUNE, 14, 10, 0, 0);
     @Mock
     RetrievePriceUseCase retrievePriceUseCase;
 
@@ -33,6 +33,7 @@ public class PriceControllerTest {
     void initPriceController() {
         this.priceController = new PriceController(retrievePriceUseCase);
     }
+
     @Test
     void testGetPriceSuccess() {
         // GIVEN

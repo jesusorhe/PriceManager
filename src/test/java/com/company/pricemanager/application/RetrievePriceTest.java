@@ -4,15 +4,7 @@ import com.company.pricemanager.application.usecases.RetrievePriceUseCaseImpl;
 import com.company.pricemanager.domain.PriceMother;
 import com.company.pricemanager.domain.models.Price;
 import com.company.pricemanager.domain.ports.in.RetrievePriceUseCase;
-import static com.company.pricemanager.domain.PriceMother.*;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.when;
-
 import com.company.pricemanager.domain.ports.out.PriceRepository;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -24,16 +16,25 @@ import java.time.Month;
 import java.util.List;
 import java.util.Optional;
 
+import static com.company.pricemanager.domain.PriceMother.brandId;
+import static com.company.pricemanager.domain.PriceMother.productId;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
+
 @ExtendWith(MockitoExtension.class)
 public class RetrievePriceTest {
-    private final LocalDateTime date = LocalDateTime.of(2020, Month.JUNE, 14, 10,0,0);
+    private final LocalDateTime date = LocalDateTime.of(2020, Month.JUNE, 14, 10, 0, 0);
     @Mock
     PriceRepository priceRepository;
     RetrievePriceUseCase retrievePriceUseCase;
+
     @BeforeEach
     void initRetrievePriceUseCase() {
         this.retrievePriceUseCase = new RetrievePriceUseCaseImpl(priceRepository);
     }
+
     @Test
     void testRetrievePriceSuccess() {
         // GIVEN

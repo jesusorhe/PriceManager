@@ -4,7 +4,6 @@ import com.company.pricemanager.domain.PriceMother;
 import com.company.pricemanager.infraestructure.repositories.JpaPriceRepository;
 import com.company.pricemanager.infraestructure.repositories.PriceRepositoryAdapter;
 import com.company.pricemanager.infrastructure.entities.PriceEntityMother;
-import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

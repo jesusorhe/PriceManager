@@ -1,9 +1,6 @@
 package com.company.pricemanager.infrastructure.entities;
 
-import com.company.pricemanager.domain.models.Price;
 import com.company.pricemanager.infraestructure.entities.PriceEntity;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -20,6 +17,7 @@ public class PriceEntityMother {
     public static final Integer priority = 0;
     public static final BigDecimal priceValue = BigDecimal.valueOf(35.5);
     public static final String currency = "EUR";
+
     public static PriceEntity create(final UUID id,
                                      final Long brandId,
                                      final Long productId,
@@ -29,10 +27,10 @@ public class PriceEntityMother {
                                      final Integer priority,
                                      final BigDecimal price,
                                      final String currency) {
-            return new PriceEntity(id, brandId, productId, priceList, startDate, endDate, priority, price, currency);
+        return new PriceEntity(id, brandId, productId, priceList, startDate, endDate, priority, price, currency);
     }
 
     public static PriceEntity createWithValues() {
-            return create(id, brandId, productId, priceList, startDate, endDate, priority, priceValue, currency);
+        return create(id, brandId, productId, priceList, startDate, endDate, priority, priceValue, currency);
     }
 }

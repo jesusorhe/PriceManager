@@ -2,11 +2,7 @@ package com.company.pricemanager.infrastructure.entities;
 
 import com.company.pricemanager.domain.PriceMother;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.junit.jupiter.MockitoExtension;
 
-import static com.company.pricemanager.domain.PriceMother.*;
-import static com.company.pricemanager.domain.PriceMother.currency;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 

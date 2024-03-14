@@ -22,6 +22,7 @@ public class PriceResponseMother {
                                        BigDecimal priceValue) {
         return new PriceResponse(brandId, productId, priceList, startDate, endDate, priceValue);
     }
+
     public static PriceResponse createWithValues() {
         return create(brandId, productId, priceList, startDate, endDate, priceValue);
     }

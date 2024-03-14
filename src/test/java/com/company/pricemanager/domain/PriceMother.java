@@ -15,6 +15,7 @@ public class PriceMother {
     public static final Integer priority = 0;
     public static final BigDecimal priceValue = BigDecimal.valueOf(35.5);
     public static final String currency = "EUR";
+
     public static Price create(final Long brandId,
                                final Long productId,
                                final Integer priceList,
