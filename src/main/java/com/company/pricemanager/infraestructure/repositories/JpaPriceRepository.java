@@ -8,6 +8,6 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface JpaPriceRepository extends JpaRepository<PriceEntity, Long>{
+public interface JpaPriceRepository extends JpaRepository<PriceEntity, Long> {
     Optional<List<PriceEntity>> findByBrandIdAndProductId(Long brandId, Long ProductId);
 }

@@ -14,10 +14,12 @@ public class ApplicationConfig {
     public PriceRepositoryAdapter priceRepositoryImpl(JpaPriceRepository jpaPriceRepository) {
         return new PriceRepositoryAdapter(jpaPriceRepository);
     }
+
     @Bean
     public PriceRepository priceRepository(PriceRepositoryAdapter priceRepositoryImpl) {
         return priceRepositoryImpl;
     }
+
     @Bean
     public RetrievePriceUseCase retrievePriceUseCase(PriceRepository priceRepository) {
         return new RetrievePriceUseCaseImpl(priceRepository);

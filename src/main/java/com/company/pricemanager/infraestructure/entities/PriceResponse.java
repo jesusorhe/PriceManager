@@ -3,7 +3,6 @@ package com.company.pricemanager.infraestructure.entities;
 import com.company.pricemanager.domain.models.Price;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.Setter;
 import lombok.ToString;
 
 import java.math.BigDecimal;

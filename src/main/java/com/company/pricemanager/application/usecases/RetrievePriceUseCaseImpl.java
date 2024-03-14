@@ -36,7 +36,6 @@ public class RetrievePriceUseCaseImpl implements RetrievePriceUseCase {
     }
 
     private boolean isDateBetween(LocalDateTime date, LocalDateTime startDate, LocalDateTime endDate) {
-        return (startDate == null || date.isAfter(startDate))
-                && (endDate == null || date.isBefore(endDate));
+        return (startDate == null || date.isAfter(startDate)) && (endDate == null || date.isBefore(endDate));
     }
 }

@@ -6,6 +6,5 @@ import java.time.LocalDateTime;
 import java.util.Optional;
 
 public interface RetrievePriceUseCase {
-
     Optional<Price> getPrice(Long brandId, Long productId, LocalDateTime date);
 }

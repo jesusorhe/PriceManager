@@ -24,6 +24,7 @@ public class Price {
                            LocalDateTime endDate, Integer priority, BigDecimal price, String currency) {
         return new Price(brandId, productId, priceList, startDate, endDate, priority, price, currency);
     }
+
     private Price(@NonNull Long brandId, @NonNull Long productId, @NonNull Integer priceList, LocalDateTime startDate,
                   LocalDateTime endDate, @NonNull Integer priority, @NonNull BigDecimal price, @NonNull String currency) {
         this.brandId = Objects.requireNonNull(brandId, "BrandId cannot be null");
